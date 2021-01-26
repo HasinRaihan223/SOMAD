@@ -1,0 +1,6 @@
+[submodule "Andy/FirstAndroidGame"]
+	path = Andy/FirstAndroidGame
+	url = https://github.com/andylin2004/FirstAndroidGame
+[submodule "Andy/TicTacToeAndroid"]
+	path = Andy/TicTacToeAndroid
+	url = https://github.com/andylin2004/TicTacToeAndroid
