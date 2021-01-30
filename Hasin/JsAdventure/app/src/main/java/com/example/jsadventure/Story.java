@@ -180,7 +180,7 @@ public class Story {
     //Buy and/or get weapons
     public void merchant(){
         gs.image.setImageResource(R.drawable.merchant);
-        gs.text.setText("You arrive upon a merchant. He says for 5 gold coins he will give you a random weapon.\n\nWhat do you do?");
+        gs.text.setText("You arrive upon a merchant. He says for 5 gold coins he will give you a random weapon.\n\n***Disclaimer you can get duplicate weapons***\n\nWhat do you do?");
 
         gs.button1.setText("Pay him");
         gs.button2.setText("Go back to dungeon");
@@ -259,7 +259,7 @@ public class Story {
     //Roll 1
     public void getAxe(){
         gs.image.setImageResource(R.drawable.axe);
-        gs.text.setText("The merchant rolled a 1 and he awards you with a Battle Axe! Sturdy and strong, it'll never fail you. \n\nBattle Axe Max Damage: 25\n\nCurrent Weapon Max Damage: " + (currentWeaponDamage - 1) + "\n\nWhat do you do?");
+        gs.text.setText("The merchant rolled a 1 and he awards you with a Battle Axe! Sturdy and strong, it'll never fail you. \n\nBattle Axe Max Damage: 20\n\nCurrent Weapon Max Damage: " + (currentWeaponDamage - 1) + "\n\nWhat do you do?");
 
         gs.button1.setText("Equip new weapon");
         gs.button2.setText("Stay with current weapon");
@@ -333,7 +333,7 @@ public class Story {
     //Roll 3
     public void getDualSwords(){
         gs.image.setImageResource(R.drawable.dualswords);
-        gs.text.setText("The merchant rolled a 3 and he awards you with dual swords! Double the swords, double the fun!\n\nDual Swords Max Damage: 20\n\nCurrent Weapon Max Damage: " + (currentWeaponDamage - 1) + "\n\nWhat do you do?");
+        gs.text.setText("The merchant rolled a 3 and he awards you with dual swords! Double the swords, double the fun!\n\nDual Swords Max Damage: 25\n\nCurrent Weapon Max Damage: " + (currentWeaponDamage - 1) + "\n\nWhat do you do?");
 
         gs.button1.setText("Equip new weapon");
         gs.button2.setText("Stay with current weapon");
@@ -513,7 +513,7 @@ public class Story {
     }
 
     public void buyPotion(){
-        if (HP >= 100  || Gold <= 0){
+        if (HP >= 100  || Gold < 2){
             HP = 100;
             gs.image.setImageResource(R.drawable.witch);
             gs.text.setText("Sorry you either are full health or don't have enough money to buy a potion. Maybe come back later.");
