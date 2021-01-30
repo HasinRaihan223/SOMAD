@@ -698,7 +698,7 @@ public class Story {
     }
 
     public void ending3(){
-        gs.text.setText("However, right after equipping the demon blood sword you hear a deafening roar coming from the depths of the dungeon. How could this be, you were sure that you had explored all of the dungeon.\n\nTo Be Continued...");
+        gs.text.setText("Right after you equip the demon blood sword you hear a parrot squawking from deep in the dungeon...why is there a parrot in the dungeon?\n\nTo Be Continued...");
         gs.image.setImageResource(R.drawable.demonsword);
 
         gs.button1.setText(">>>");
