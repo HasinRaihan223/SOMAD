@@ -167,14 +167,14 @@ public class Story {
         gs.text.setText("You explore the dungeon as much as can; however, you seem to find nothing more. All that's left to do is to confront the demon lord, but he is too powerful. Hmm...we need a weapon of great power.\n\nWhat you do?");
 
         gs.button1.setText("Exit the dungeon");
-        gs.button2.setText("Go deeper into Dungeon");
-        gs.button3.setText("Do nothing and cry");
+        gs.button2.setText("Do nothing and cry");
+        gs.button3.setText("");
 
-        showAllButton();
+        gs.button3.setVisibility(View.INVISIBLE);
 
         nextPosition1 = "merchant";
-        nextPosition2 = "nothingLeft";
-        nextPosition3 = "getKilled";
+        nextPosition2 = "getKilled";
+        nextPosition3 = "";
     }
 
     //Buy and/or get weapons
@@ -592,9 +592,9 @@ public class Story {
             nextPosition2 = "";
             nextPosition3 = "";
         }
-       if (hasRelicSword==true && defeatedGolem==true){
+       if (hasRelicSword==true){
            gs.image.setImageResource(R.drawable.overlord);
-           gs.text.setText("You plop down and start crying, however you realize you have a sword of great power. You decide to confront the demon lord.\n\nWhat do you do next?");
+           gs.text.setText("You plop down and start crying, however you realize you have a sword of great power. You decide to confront the demon lord of the dungeon.\n\nWhat do you do next?");
 
            gs.button1.setText("Fight");
            gs.button2.setText("Run away");
