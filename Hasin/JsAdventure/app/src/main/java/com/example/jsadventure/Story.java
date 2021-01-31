@@ -90,7 +90,7 @@ public class Story {
         gs.weapon.setText("Current Weapon: "+ currentWeapon);
         gs.money.setText("Gold Coins: "+Gold);
 
-        gs.text.setText("Welcome to this game player! Apparently the game creator thought it was best for you to start in dungeon!\n\nWhat you do?");
+        gs.text.setText("Welcome to this game player! Apparently the game creator thought it was best for you to start in dungeon!\n\nWhat do you do?");
 
         gs.button1.setText("Exit the dungeon");
         gs.button2.setText("Go deeper into Dungeon");
@@ -106,7 +106,7 @@ public class Story {
     public void secondStartingPoint(){
         if (defeatedSlime==false){
             gs.image.setImageResource(R.drawable.dunge);
-            gs.text.setText("You are inside a dungeon!\n\nWhat you do?");
+            gs.text.setText("You are inside a dungeon! It's rumored to be ruled by a demon lord. Better avoid him until you're strong enough.\n\nWhat do you do?");
 
             gs.button1.setText("Exit the dungeon");
             gs.button2.setText("Go deeper into Dungeon");
@@ -120,7 +120,7 @@ public class Story {
         }
         if (defeatedSlime==true && defeatedOrc==false && defeatedGolem==false){
             gs.image.setImageResource(R.drawable.dunge);
-            gs.text.setText("You are inside a dungeon!\n\nWhat you do?");
+            gs.text.setText("You are inside a dungeon!\n\nWhat do you do?");
 
             gs.button1.setText("Exit the dungeon");
             gs.button2.setText("Go deeper into Dungeon");
@@ -134,7 +134,7 @@ public class Story {
         }
         if (defeatedSlime==true && defeatedOrc==true && defeatedGolem==false){
             gs.image.setImageResource(R.drawable.dunge);
-            gs.text.setText("You are inside a dungeon!\n\nWhat you do?");
+            gs.text.setText("You are inside a dungeon!\n\nWhat do you do?");
 
             gs.button1.setText("Exit the dungeon");
             gs.button2.setText("Go deeper into Dungeon");
@@ -148,7 +148,7 @@ public class Story {
         }
         if (defeatedSlime==true && defeatedOrc==true && defeatedGolem==true){
             gs.image.setImageResource(R.drawable.dunge);
-            gs.text.setText("You are inside a dungeon!\n\nWhat you do?");
+            gs.text.setText("You are inside a dungeon!\n\nWhat do you do?");
 
             gs.button1.setText("Exit the dungeon");
             gs.button2.setText("Go deeper into Dungeon");
@@ -164,7 +164,7 @@ public class Story {
 
     public void nothingLeft(){
         gs.image.setImageResource(R.drawable.gate);
-        gs.text.setText("You explore the dungeon as much as can; however, you seem to find nothing more. All that's left to do is to confront the demon lord, but he is too powerful. Hmm...we need a weapon of great power.\n\nWhat you do?");
+        gs.text.setText("You explore the dungeon as much as can; however, you seem to find nothing more. All that's left to do is to confront the demon lord, but he is too powerful. Hmm...we need a weapon of great power.\n\nWhat do you do?");
 
         gs.button1.setText("Exit the dungeon");
         gs.button2.setText("Do nothing and cry");
@@ -577,9 +577,9 @@ public class Story {
 
     //Overlord boss battle
     public void getKilled(){
-        if (hasRelicSword==false){
+        if (hasRelicSword==true && defeatedGolem==false){
             gs.image.setImageResource(R.drawable.overlord);
-            gs.text.setText("You plop down and start crying. An ancient demon lord overhears you sobbing and decides to permanently end your misery.");
+            gs.text.setText("You plop down and start crying. You realize you have a sword of great power; however, you haven't cleared the dungeon. The demon lord of the dungeon and his minions overhear you sobbing. There are too many to fight all at once. You put up a good fight, but in the end it was all for nothing.");
 
             gs.button1.setText(">>>");
             gs.button2.setText("");
@@ -592,9 +592,9 @@ public class Story {
             nextPosition2 = "";
             nextPosition3 = "";
         }
-       if (hasRelicSword==true){
+       else if (hasRelicSword==true && defeatedGolem==true){
            gs.image.setImageResource(R.drawable.overlord);
-           gs.text.setText("You plop down and start crying, however you realize you have a sword of great power. You decide to confront the demon lord of the dungeon.\n\nWhat do you do next?");
+           gs.text.setText("You plop down and start crying, however you realize you have a sword of great power and that you cleared the dungeon. You decide to confront the demon lord of the dungeon.\n\nWhat do you do next?");
 
            gs.button1.setText("Fight");
            gs.button2.setText("Run away");
@@ -605,6 +605,21 @@ public class Story {
 
            nextPosition1 = "lordFight";
            nextPosition2 = "sike";
+           nextPosition3 = "";
+       }
+       else{
+           gs.image.setImageResource(R.drawable.overlord);
+           gs.text.setText("You plop down and start crying. An ancient demon lord overhears you sobbing and decides to permanently end your misery.");
+
+           gs.button1.setText(">>>");
+           gs.button2.setText("");
+           gs.button3.setText("");
+
+           gs.button2.setVisibility(View.INVISIBLE);
+           gs.button3.setVisibility(View.INVISIBLE);
+
+           nextPosition1 = "death";
+           nextPosition2 = "";
            nextPosition3 = "";
        }
     }
@@ -714,7 +729,7 @@ public class Story {
     }
 
     public void ending4(){
-        gs.text.setText("Well that's it player..for now that is. I hope you enjoyed the game.\n\nClick the button below to restart");
+        gs.text.setText("Well that's it player...for now that is. I hope you enjoyed the game.\n\nClick the button below to restart");
         gs.image.setImageResource(R.drawable.win);
 
         gs.button1.setText("Restart");
