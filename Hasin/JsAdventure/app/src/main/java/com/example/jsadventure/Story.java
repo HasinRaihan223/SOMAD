@@ -196,7 +196,7 @@ public class Story {
     public void getWeapon(){
         if (Gold >= 5){
             gs.image.setImageResource(R.drawable.paymoney);
-            gs.text.setText("You pay the merchant 5 gold coins. The merchant says he will roll a dice to decide which random which to give you.");
+            gs.text.setText("You pay the merchant 5 gold coins. The merchant says he will roll a dice to decide which random weapon to give you.");
             Gold -= 5;
             gs.money.setText("Gold Coins: " + Gold);
             gs.button1.setText(">>>");
@@ -498,7 +498,7 @@ public class Story {
     //Healing and stuff
     public void witch(){
         gs.image.setImageResource(R.drawable.witch);
-        gs.text.setText("You arrive upon a witch's hut. She says for 2 gold coins she will give you a potion that can restore your health.\n\nWhat do you do?");
+        gs.text.setText("You arrive upon a witch's hut. She says for 2 gold coins she will give you a potion that will immediately restore your health.\n\nWhat do you do?");
 
         gs.button1.setText("Pay her");
         gs.button2.setText("Go back");
