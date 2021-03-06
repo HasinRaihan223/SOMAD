@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PongBeLike</string>
+    <string name="button">Button</string>
+    <string name="pongBall">ball</string>
+    <string name="pongbar">pongBar</string>
+    <string name="title_message">PONG</string>
+    <string name="play">Play</string>
+    <string name="you_lost">You Lost!</string>
+</resources>
